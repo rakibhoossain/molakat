@@ -83,3 +83,25 @@ function magazil_comment($comment, $args, $depth) { ?>
                                             
 <?php
     }
+
+
+/**
+ * Category list.
+ */
+if ( ! function_exists( 'molakat_post_categories' ) ) :
+  /**
+   * Displays categories.
+   */
+  function molakat_post_categories($multiple = false) {
+    if ( 'post' === get_post_type() ) {
+      if ($multiple) {
+        echo get_the_category_list();
+      }else{
+        $category = get_the_category( get_the_ID() );
+        if ( $category && !is_wp_error( $category ) ) :
+          echo '<a href="'.get_category_link($category[0]->cat_ID).'">' . $category[0]->cat_name . '</a>';
+        endif;
+      }
+    }
+  }
+endif;

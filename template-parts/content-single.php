@@ -3,7 +3,7 @@
     <div id="single_news_page" class="mt-3">
       <div class="container">
         <div class="snp_small_header">
-          <h3><span>ফিচার</span><?php the_title( '', '' ); ?></h3>
+          <h3><span><?php molakat_post_categories(); ?></span><?php the_title( '', '' ); ?></h3>
         </div>
         <div class="single_news d-flex">
           <div class="single_post_news mt-4">
@@ -117,112 +117,11 @@
                 </div>
               </div>
             </div>
-            <div class="sidebar_menu mt-5">
-              <ul class="nav nav-tabs" id="myTab" role="tablist">
-                <li class="nav-item">
-                  <a class="nav-link active" id="lastNews-tab" data-toggle="tab" href="#lastNews" role="tab" aria-controls="lastNews" aria-selected="true">সর্বশেষ খবর</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" id="favouriteNews-tab" data-toggle="tab" href="#favouriteNews" role="tab" aria-controls="favouriteNews" aria-selected="false">জনপ্রিয় খবর</a>
-                </li>
-              </ul>
-              <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="lastNews" role="tabpanel" aria-labelledby="lastNews-tab">
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                </div>
-                <div class="tab-pane fade" id="favouriteNews" role="tabpanel" aria-labelledby="favouriteNews-tab">
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                  <div class="single_menu_page_sidebar_news d-flex position-relative hover_block mt-3">
-                    <div class="single_menu_page_sidebar_news_img fb-30">
-                      <img src="https://via.placeholder.com/100x70" class="img-fluid">
-                    </div>
-                    <div class="single_menu_page_sidebar_news_heading fb-70">
-                      <h4 class="ml-2">আমার সোনার বাংলা । আমি তোমায় ভালোবাসি</h4>
-                    </div>
-                    <a href="#" class="overlay_link"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+
+
+            <?php get_template_part( 'template-parts/sidebar-post', 'tab' ); ?>
+
           </div>
         </div>
       </div>
