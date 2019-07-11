@@ -1,0 +1,48 @@
+@media screen and (max-width: 991px) {
+	.navbar{
+		margin-top: 10px;
+	}
+	.navbar-nav{
+		margin-left: 20px;
+	}
+	.navbar-light .navbar-toggler{
+		border: none;
+	}
+	.navbar-toggler:focus, .navbar-toggler:hover{
+		outline: none;
+	}
+	#top_header .ads img{
+		width: 300px;
+	}
+	.logo{
+		top: -12px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.logo > img{
+		width: 210px;
+	}
+	.logo{
+		top: 30px;
+	}
+}
+@media screen and (max-width: 575px) {
+	#top_header{
+		background-color: #000 !important;
+	}
+	#top_header .ads img{
+		width: 100%;
+	}
+	#top_header .logo_ads .employee_info{
+		text-align: center;
+	}
+	.logo{
+		position: static;
+		text-align: center;
+	}
+	.social_media ul{
+		justify-content: normal;
+		width: 225px;
+		margin: 10px auto auto auto;
+	}
+}

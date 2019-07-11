@@ -1,0 +1,120 @@
+@media screen and (max-width: 1199px) {
+	.story_fn_heading>h4,.novel_fn_heading>h4{
+		font-size: 18px;
+	}
+	.sfsn_heading>h4{
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 1199px) {
+	#slider_news{
+		margin-top: 20px;
+	}
+	#slider, #favourite_writing{
+		flex-basis: 100%;
+	}
+	#favourite_writing{
+		padding: 20px 0 0 0 !important;
+	}
+	.summary>img{
+		width: 350px !important;
+	}
+	.camera_kabbo{
+		flex-basis: 100%;
+	}
+	.scene_kabbo{
+		flex-basis: 100%;
+		padding-top: 20px;
+	}
+	.sk_top_news_img>img{
+		width: 1000px;
+	}
+	.sk_side_news .side_news_img>img{
+		width: 400px;
+	}
+	.story, .novel{
+		flex-basis: 100%;
+		margin: 0;
+		padding: 20px 0;
+	}
+	.novel_fn_img>img,.story_fn_img>img{
+		width: 250px;
+	}
+	.single_ads_book{
+		flex-basis: 32%;
+		margin: 20px auto;
+	}
+	.single_ads_book_img>img{
+		width: 220px;
+	}
+	.poem, .book_discuss, .culture{
+		flex-basis: 100%;
+		margin: 0;
+	}
+	.p_main_news_img>img,.bd_main_news_img>img,.c_main_news_img>img{
+		width: 800px;
+	}
+	.p_fn{
+		padding-bottom: 30px;
+	}
+	.p_fsn_img>img{
+		width: 250px;
+	}
+	#sna .sn .s{
+		flex-basis: 100%;
+		margin: 0;
+	}
+	.s .s_main_news_img>img{
+		width: 1000px;
+	}
+	.s .s_feature_news{
+		margin: 10px 30px;
+	}
+	.s_feature_news{
+		margin: 20px 0 20px 0 !important;
+	}
+	.sfsn_img>img{
+		width: 400px;
+	}
+	/*.fb-page span{
+		width: 1000px !important;
+	}*/
+	.g_ads_page img{
+		width: 800px;
+		height: 200px;
+	}
+	.s:last-child{
+		text-align: center;
+	}
+	.like_page_ad{
+		margin-bottom: 20px;
+	}
+
+}
+@media screen and (max-width: 575px) {
+	.camera_kabbo .ck_feature_news{
+		flex-basis: 49%;
+		margin: 0 auto 10px auto;
+	}
+	.story_fsn, .novel_fsn{
+		flex-basis: 100%;
+		margin: 10px 0;
+	}
+	.novel_fn_img > img, .story_fn_img > img{
+		width: 480px;
+	}
+	.ck_fn_img>img{
+		width: 300px;
+	}
+	.single_ads_book{
+		flex-basis: 100%;
+		margin: ;
+	}
+	#ads_book{
+		padding: 0 !important;
+	}
+	.single_ads_book_img > img{
+		width: 480px;
+	}
+
+}

@@ -1,0 +1,74 @@
+
+/*====Top Header=========*/
+
+#top_header{
+	background: transparent;
+}
+#top_header .logo_ads{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+#top_header .logo_ads .ads{
+	background-color: #000;
+	padding: 10px;
+	text-align: right;
+}
+#top_header .logo_ads .employee_info{
+	background: #FAA61A;
+	text-align: right;
+	padding: 10px;
+}
+#top_header .logo_ads .employee_info .employee_name>h5{
+	margin: 0;
+	font-size: 25px;
+}
+.logo{
+	position: absolute;
+	left: auto;
+	top: 25px;
+}
+.logo>img{
+	/*width: 300px;*/
+}
+
+
+/*========Main Header=============*/
+#main_header{
+	background-color: #FBF5EF;
+}
+.navbar{
+	padding: 0;
+}
+.navbar-light .navbar-nav .nav-item {
+	margin-right: 3px;
+}
+.navbar-light .navbar-nav .nav-link{
+	color: #000;
+	font-size: 22px;
+	border-bottom: 3px solid transparent;
+}
+.navbar-light .navbar-nav .nav-link:focus, 
+.navbar-light .navbar-nav .nav-link:hover{
+	color: #000;
+	background: transparent;
+	border-bottom: 3px solid #FAA61A;
+}
+.social_media ul{
+	margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+.social_media ul li{
+	margin: 0 10px;
+}
+.social_media ul li>a>img{
+	width: 30px;
+}
+.social_media ul li:last-child{
+	margin-top: -5px;
+}
+.social_media ul li:last-child img{
+	width: 40px;
+}

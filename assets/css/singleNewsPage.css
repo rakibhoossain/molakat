@@ -1,0 +1,127 @@
+body{
+	background-color: #fff !important;
+}
+#single_news_page{
+
+}
+.single_post_news{
+
+}
+.snp_small_header>h3{
+	background-color: #F2F2F2;
+	padding: 7px 15px;
+	border-left: 5px solid #F54236;
+	font-size: 23px;
+}
+.snp_small_header>h3>span{
+	font-weight: bold;
+	margin: 10px;
+}
+.single_post_news{
+	flex-basis: 68%;
+	margin-right: 2%;
+}
+.single_post_news_content{
+	background-color: #F5F5F5;
+	padding: 20px 10px;
+}
+.news_writer_sml{
+	padding: 10px 0;
+	border-top: 1px solid #dddbdb;
+	border-bottom: 1px solid #dddbdb;
+	margin: 10px 0 20px 0;
+}
+.news_writer_sml .writer_info{
+	flex-basis: 30%;
+}
+#single_news_page .sml{
+	flex-basis: 70%;
+}
+.media-body{
+	margin-top: 12px;
+}
+#single_news_page .sml{
+	margin-top: 10px;
+}
+#single_news_page .sml .sml_icon{
+	justify-content: flex-end;
+}
+.sm_icon a{
+	display: block;
+	color: #000;
+	text-decoration: none;
+	margin: 0 2px;
+}
+.fb_share_count{
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.f_icon .fa-stack{
+	color: #3E5999;
+}
+.t_icon .fa-stack{
+	color: #23C4F3;
+}
+.p_icon .fa-stack{
+	color: #C8006E;
+}
+.print_icon .fa-stack{
+	color: #CCD5DC;
+}
+.fa-print,.fa-eye{
+	color: #000;
+}
+.post_sees_icon .fa-stack{
+	color: #CFCFCF;
+}
+.single_menu_page_sidebar{
+	flex-basis: 30%;
+}
+.publish_info{
+	padding: 10px 15px;
+	background: #F5F5F5;
+	border: 1px solid #ecedef;
+}
+#single_news_page .square>a{
+	padding: 5px 20px;
+	/*background: red;*/
+	color: #fff;
+	font-size: 20px;
+	margin: 0 5px;
+}
+.square_f_icon>a{
+	background-color: #3E5999;
+}
+.square_t_icon>a{
+	background-color: #23C4F3;
+}
+.square_p_icon>a{
+	background-color: #C8006E;
+}
+.square_y_icon>a{
+	background-color: #E52526;
+}
+#single_news_page .square_icon>a>i{
+	vertical-align: middle;
+}
+.single_news_content>p{
+	font-size: 20px;
+}
+.see_more_heading{
+	border-bottom: 2px solid #46CF73;
+}
+.see_more_heading>h3>span{
+	background: #46CF73;
+	color: #fff;
+	padding: 3px 10px;
+	border-radius: 6px 6px 0 0;
+}
+.read_more .card{
+	padding: 5px;
+}
+.read_more .card .card-body{
+	padding: 8px 5px 8px 5px;
+}
+.read_more .card .card-body>h5{
+	margin: 0;
+}

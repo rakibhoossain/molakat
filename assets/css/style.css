@@ -1,0 +1,100 @@
+
+
+/*===============Favourite Writing======*/
+#slider_news{
+	background-color: #FBF5EF;
+	padding-top: 5px;
+}
+#slider,#favourite_writing{
+	flex-basis: 50%;
+	overflow: hidden;
+}
+#slider_news .summary{
+	flex-basis: 49%;
+	margin: 0 auto;
+}
+.owl-carousel{
+	position: relative;
+}
+.owl-theme .owl-nav.disabled + .owl-dots{
+	position: absolute;
+	top: 90%;
+	width: 100%;
+	margin: 0;
+}
+.owl-theme .owl-dots .owl-dot span{
+	width: 15px;
+	height: 15px;
+}
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span{
+	background-color: #fff;
+}
+.owl-theme .owl-dots .owl-dot:focus{
+	outline: none;
+}
+#kabbo{
+	background-color: #000;
+}
+
+.camera_kabbo{
+	flex-basis: 68%;
+	margin-right: 2%;
+}
+.scene_kabbo{
+	flex-basis: 30%;
+}
+.camera_kabbo .section_header,.scene_kabbo .section_header{
+	padding-bottom: 10px;
+}
+#favourite_writing .favourite_writing_news .row:last-child{
+	margin-top: 14px;
+}
+.poem,.book_discuss,.culture{
+	flex-basis: 32%;
+	margin: 0 auto;
+}
+.story,.novel{
+	flex-basis: 49%;
+}
+.story_fsn,.novel_fsn{
+	flex-basis: 32%;
+	margin: 0 auto
+}
+.s_feature_news .sfsn{
+	flex-basis: 48%;
+	margin: 0 auto;
+}
+#sna .sn .s{
+	flex-basis: 32%;
+	margin: 0 auto;
+}
+.fb-page span{
+	/*width: 350px !important;*/
+}
+#favourite_writing .favourite_writing_news .summary_info,
+.single_ads_book_heading,.sk_top_news_heading,
+.story_fn_heading,.novel_fn_heading,.story_mimg_heading,.novel_mimg_heading,
+.p_main_news_heading,.bd_main_news_heading,.c_main_news_heading,.s_main_news_heading,
+.sfsn_heading,.camera_kabbo_news_heading,.ck_fn_heading{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 5px 7px;
+}
+
+#google_ads{
+	margin: 10px 0;
+}
+.single_ads_book{
+	flex-basis: 16%;
+	margin: 0 auto;
+}
+.camera_kabbo .ck_feature_news{
+	flex-basis: 24%;
+	margin: 0 auto;
+}
+.ck_fn_heading>h4{
+	font-size: 18px;
+}
