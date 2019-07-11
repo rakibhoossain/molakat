@@ -35,3 +35,51 @@ function molakat_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'molakat_pingback_header' );
+
+
+// Comments 
+function magazil_comment_field_to_bottom( $fields ) {
+    $comment_field = $fields['comment'];
+    unset( $fields['comment'] );
+    $fields['comment'] = $comment_field;
+    return $fields;
+}
+add_filter( 'comment_form_fields', 'magazil_comment_field_to_bottom' );
+
+
+/**
+ *  Custom comments list
+ */ 
+function magazil_comment($comment, $args, $depth) { ?>
+<li <?php comment_class("comment single-comment"); ?> id="comment-<?php comment_ID() ; ?>">
+    <div class="comment-top-area justify-content-between d-flex">
+      <div class="user d-flex">
+        <div class="thumb">
+          <?php echo get_avatar($comment,'60','' ); ?>
+        </div>
+        <div class="comment-meta">
+          <h5 class="comment-author"><?php echo get_comment_author_link();?></h5>
+          <h6 class="comment-date"><?php comment_date(); ?></h6>
+          <?php edit_comment_link(__('(Edit)','molakat'),'  ','') ;?>
+        </div>
+      </div>
+
+      <div class="reply-btn">
+        <?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ;?>
+      </div>
+
+    </div>
+
+    <div class="comment-desc">
+      <div class="comment-content">
+        <?php if ($comment->comment_approved == '0') : ?>
+          <em><?php esc_attr_e('Your comment is awaiting moderation.','molakat') ;?></em>
+          <br />
+        <?php endif; ?>
+        <?php comment_text() ;?>
+      </div>
+    </div>
+</li>
+                                            
+<?php
+    }

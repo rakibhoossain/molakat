@@ -7,7 +7,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package molakat
+ * @package magazil
  */
 
 /*
@@ -20,56 +20,89 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
-
+<?php if ( have_comments() ) : ?>
+	
+	<h2 class="comments-title">
 	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-		?>
-		<h2 class="comments-title">
-			<?php
-			$molakat_comment_count = get_comments_number();
-			if ( '1' === $molakat_comment_count ) {
-				printf(
-					/* translators: 1: title. */
-					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'molakat' ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			} else {
-				printf( // WPCS: XSS OK.
-					/* translators: 1: comment count number, 2: title. */
-					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $molakat_comment_count, 'comments title', 'molakat' ) ),
-					number_format_i18n( $molakat_comment_count ),
-					'<span>' . get_the_title() . '</span>'
-				);
-			}
-			?>
-		</h2><!-- .comments-title -->
-
-		<?php the_comments_navigation(); ?>
-
-		<ol class="comment-list">
-			<?php
-			wp_list_comments( array(
-				'style'      => 'ol',
-				'short_ping' => true,
-			) );
-			?>
-		</ol><!-- .comment-list -->
-
-		<?php
-		the_comments_navigation();
-
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() ) :
-			?>
-			<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'molakat' ); ?></p>
-			<?php
-		endif;
-
-	endif; // Check for have_comments().
-
-	comment_form();
+		printf( // WPCS: XSS OK.
+			esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'butterfly' ) ),
+			number_format_i18n( get_comments_number() ),
+			'<span>' . get_the_title() . '</span>'
+		);
 	?>
+	</h2>
 
-</div><!-- #comments -->
+	<ol id="thecomments" class="commentlist comments-list">
+	<?php wp_list_comments('type=comment&callback=magazil_comment');?>
+	</ol>
+
+<!-- comments pagenavi Start. -->
+	<?php
+	if (get_option('page_comments')) {
+		$comment_pages = paginate_comments_links('echo=0');
+		if ($comment_pages) {
+?>
+		<div id="commentnavi">
+			<span class="pages"><?php esc_attr_e('Comment pages', 'butterfly'); ?></span>
+			echo '<div id="commentpager">'.$comment_pages.'</div>';			
+			<div class="fixed"></div>
+		</div>
+<?php
+		}
+	}
+?>
+
+<?php else :  ?>
+
+	<?php if ( comments_open() ) : ?>
+
+	<?php else : ?>
+		<!-- If comments are closed. -->
+		<p class="nocomments"></p>
+
+	<?php endif; ?>
+<?php endif; ?>
+
+<?php if ( comments_open() ) : ?>
+
+<div id="respond" class="respondbg">
+
+<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
+<p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'butterfly'),  esc_url(wp_login_url( get_permalink() ))); ?></p>
+<?php else : ?>
+<?php 
+$commenter = wp_get_current_commenter();
+$req = get_option( 'require_name_email' );
+$aria_req = ( $req ? " aria-required='true'" : '' );
+global $required_text;
+
+$comments_args = array(
+'class_submit' => 'primary-btn text-uppercase',
+         'comment_notes_before' => '<p class="comment-notes">' .
+    esc_attr__( 'Your email address will not be published.', 'butterfly' ) . ( $req ? $required_text : '' ) .
+    '</p>',
+        'title_reply'=>esc_attr__('Leave a Reply', 'butterfly'),
+        'comment_notes_after' => '',
+        'comment_field' => '<div class="clear"></div><p class="form-allowed-tags"></p>
+<section class="comment-form-comment form-group"><div id="comment-textarea"><textarea id="comment" name="comment" placeholder="'.esc_attr__('Message', 'butterfly').'"  cols="45" rows="8"  class="textarea-comment form-control" aria-required="true"></textarea></div></section>',
+		'fields' => apply_filters( 'comment_form_default_fields', array(
+
+    'author' =>
+      '<div class="row"><section class="comment-form-author form-group col-md-4"><input id="author" class="input-name form-control" name="author" placeholder="'.esc_attr__('Name', 'butterfly').'"  type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+      '" size="30"' . $aria_req . ' /></section>',
+
+    'email' =>
+      '<section class="comment-form-email form-group col-md-4"><input id="email" class="input-name form-control" name="email" placeholder="'.esc_attr__('Email', 'butterfly').'"  type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+      '" size="30"' . $aria_req . ' /></section>',
+
+    'url' =>
+      '<section class="comment-form-url form-group col-md-4"><input id="url" class="input-name form-control" placeholder="'.esc_attr__('Website', 'butterfly').'" name="url"  type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+      '" size="30" /></section></div>'
+    ))
+);
+?>
+<?php comment_form($comments_args);?>
+
+<?php endif;?>
+</div>
+<?php endif;?>

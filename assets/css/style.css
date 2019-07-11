@@ -98,3 +98,56 @@
 .ck_fn_heading>h4{
 	font-size: 18px;
 }
+
+
+/*Navigation*/
+.nav-links{
+
+}
+.nav-previous a{
+    margin-left: 15px;
+}
+.nav-next a{
+    margin-right: 15px;	
+}
+.nav-previous a:before {
+  content: "\f100";
+  margin-left: -13px;
+  margin-right: 5px;
+}
+.nav-next a:after {
+  content: "\f101";
+  margin-left: 5px;
+  margin-right: -13px;
+}
+.nav-previous a:before, .nav-next a:after {
+  font-family: 'FontAwesome';
+  font-weight: 700;
+}
+.navigation.post-navigation {
+    margin-top: 20px;
+    clear: both;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}

@@ -51,6 +51,7 @@ if ( ! function_exists( 'molakat_setup' ) ) :
 		add_image_size( 'molakat-large-sm', 500, 220, true );
 
 		add_image_size( 'molakat-small', 300, 150, true );
+		add_image_size( 'molakat-small-x', 280, 180, true );
 		add_image_size( 'molakat-small-ss', 200, 150, true );
 		add_image_size( 'molakat-small-sx', 200, 120, true );
 		add_image_size( 'molakat-small-s', 180, 100, true );
@@ -222,6 +223,11 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Register Custom Navigation Walker.
  */
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
+
+/**
+ * Implement related post feature.
+ */
+require get_template_directory() . '/inc/class-magazil-related-posts.php';
 
 
 
