@@ -68,6 +68,7 @@ a.overlay_link{
 	bottom: 0;
 	background: rgba(0,0,0,0.03);
 	display: none;
+  z-index: 99999999999;
 }
 /*#slider_news .carousel_item:hover a.slider_img_overlay,
 #ads_book .single_ads_book:hover a.ads_book_overlay,*/

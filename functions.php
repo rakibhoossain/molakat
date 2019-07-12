@@ -181,6 +181,7 @@ function molakat_scripts() {
     wp_enqueue_style( 'molakat-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), '1.0' );
     wp_enqueue_style( 'molakat-globalResponsive', get_stylesheet_directory_uri() . '/assets/css/globalResponsive.css', array(), '1.0' );
     wp_enqueue_style( 'molakat-responsive', get_stylesheet_directory_uri() . '/assets/css/responsive.css', array(), '1.0' );
+    wp_enqueue_style( 'font-awesome', get_stylesheet_directory_uri() . '/assets/css/font-awesome.min.css', array(), '1.0' );
 
 	if ( is_single() ) {
 	    wp_enqueue_style( 'molakat-single-post', get_stylesheet_directory_uri() . '/assets/css/singleNewsPage.css', array(), '1.0' );
