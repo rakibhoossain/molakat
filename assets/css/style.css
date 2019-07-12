@@ -477,3 +477,21 @@ a {
 .social-menu a .fa {
     font-size: 1.4rem;
 }
+.info_title,
+.snp_big_header,
+.snp_small_header{
+  -ms-word-break: break-all;
+  word-break: break-all;
+}
+.sfsn_heading,
+.s_main_news_heading,
+.p_main_news_heading,
+.single_ads_book_heading,
+.story_fn_heading,
+.story_mimg_heading,
+.sk_side_news_heading,
+.camera_kabbo_news_heading,
+.info_title {
+    color: #fff;
+    background: #0a0a0a26;
+}
