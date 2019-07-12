@@ -49,7 +49,7 @@
                 <div class="summary position-relative hover_block <?php echo ($count>=2)? 'mt-3':'' ?>">
 
                   <?php if(has_post_thumbnail()){ 
-                    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'molakat-large' );
+                    $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'molakat-small' );
                     $image = esc_url($image_url[0]);
                     $title = get_the_title();
                     printf('<img class="img-fluid" src="'.esc_url($image).'" alt="'.$title.'">');

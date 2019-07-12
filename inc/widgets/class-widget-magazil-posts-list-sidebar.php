@@ -9,8 +9,8 @@ if(!class_exists('Widget_Magazil_Posts_List_Sidebar')){
 		
 		parent::__construct(
 			'magazil_recent_posts', // Base ID
-			__( 'Molakat: Recent & popular posts', 'magazil' ), // Name
-			array( 'description' => __( 'Sidebar area Recent and populare Posts.', 'magazil' ), ) // Args
+			__( 'Molakat: Recent & popular posts', 'molakat' ), // Name
+			array( 'description' => __( 'Sidebar area Recent and populare Posts.', 'molakat' ), ) // Args
 		);
 		
 	}
@@ -23,13 +23,13 @@ if(!class_exists('Widget_Magazil_Posts_List_Sidebar')){
 	}	
 	
  	function form( $instance ) {
- 	    $defaults = array('list_num' => 4, 'title' => __( 'Recent Popular', 'magazil' ));
+ 	    $defaults = array('list_num' => 4, 'title' => __( 'Recent Popular', 'molakat' ));
  		$instance = wp_parse_args( (array) $instance, $defaults );
  	
 	?>
 <p>
   <label for="<?php echo esc_attr( $this->get_field_id( 'title' )); ?>">
-    <?php _e('Title', 'magazil'); ?>
+    <?php _e('Title', 'molakat'); ?>
     :</label>
   <br />
   <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' )); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' )); ?>" value="<?php echo esc_attr($instance['title']); ?>" />
@@ -37,7 +37,7 @@ if(!class_exists('Widget_Magazil_Posts_List_Sidebar')){
 <p>
 	<label class="block" for="input_<?php echo esc_attr( $this->get_field_id( 'list_num' ) ); ?>">
 	    <span class="customize-control-title">
-	       <?php _e( 'Posts to Show', 'magazil' ); ?> :
+	       <?php _e( 'Posts to Show', 'molakat' ); ?> :
 	    </span>
 	</label>
 	<div class="slider-container">
@@ -63,7 +63,7 @@ if(!class_exists('Widget_Magazil_Posts_List_Sidebar')){
 
 	function widget( $args, $instance ) {
  		extract( $args );
- 	    $title    = apply_filters(__('Recent Posts', 'magazil'), esc_attr($instance['title']) );
+ 	    $title    = apply_filters(__('Recent Posts', 'molakat'), esc_attr($instance['title']) );
 		$list_num = absint($instance['list_num']);
 		
 		echo wp_specialchars_decode($before_widget);

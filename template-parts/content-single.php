@@ -63,8 +63,9 @@
                     </div>
                   <!-- </div> -->
                   <!-- <div class="col-md-8"> -->
-                    <div class="sml fb-70">
-                      <div class="sml_icon d-flex">
+                    <div class="sml fb-70 pull-right">
+                      <?php echo do_shortcode( '[Sassy_Social_Share]' ); ?>
+                      <!-- <div class="sml_icon d-flex">
                         <div class="fb_share_count">
                           <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                         </div>
@@ -109,10 +110,9 @@
                             <span class="post_sees_count">102</span>
                           </a>
                         </div>
-                      </div>
+                      </div> -->
                     </div>
-                  <!-- </div> -->
-                <!-- </div> -->
+
               </div>
               <?php if(has_post_thumbnail()){ 
                 $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'molakat-larg-x' );

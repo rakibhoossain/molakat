@@ -25,7 +25,7 @@ if ( post_password_required() ) {
 	<h2 class="comments-title">
 	<?php
 		printf( // WPCS: XSS OK.
-			esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'butterfly' ) ),
+			esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'molakat' ) ),
 			number_format_i18n( get_comments_number() ),
 			'<span>' . get_the_title() . '</span>'
 		);
@@ -43,7 +43,7 @@ if ( post_password_required() ) {
 		if ($comment_pages) {
 ?>
 		<div id="commentnavi">
-			<span class="pages"><?php esc_attr_e('Comment pages', 'butterfly'); ?></span>
+			<span class="pages"><?php esc_attr_e('Comment pages', 'molakat'); ?></span>
 			echo '<div id="commentpager">'.$comment_pages.'</div>';			
 			<div class="fixed"></div>
 		</div>
@@ -68,7 +68,7 @@ if ( post_password_required() ) {
 <div id="respond" class="respondbg">
 
 <?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-<p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'butterfly'),  esc_url(wp_login_url( get_permalink() ))); ?></p>
+<p><?php printf(__('You must be <a href="%s">logged in</a> to post a comment.', 'molakat'),  esc_url(wp_login_url( get_permalink() ))); ?></p>
 <?php else : ?>
 <?php 
 $commenter = wp_get_current_commenter();
@@ -79,24 +79,24 @@ global $required_text;
 $comments_args = array(
 'class_submit' => 'primary-btn text-uppercase',
          'comment_notes_before' => '<p class="comment-notes">' .
-    esc_attr__( 'Your email address will not be published.', 'butterfly' ) . ( $req ? $required_text : '' ) .
+    esc_attr__( 'Your email address will not be published.', 'molakat' ) . ( $req ? $required_text : '' ) .
     '</p>',
-        'title_reply'=>esc_attr__('Leave a Reply', 'butterfly'),
+        'title_reply'=>esc_attr__('Leave a Reply', 'molakat'),
         'comment_notes_after' => '',
         'comment_field' => '<div class="clear"></div><p class="form-allowed-tags"></p>
-<section class="comment-form-comment form-group"><div id="comment-textarea"><textarea id="comment" name="comment" placeholder="'.esc_attr__('Message', 'butterfly').'"  cols="45" rows="8"  class="textarea-comment form-control" aria-required="true"></textarea></div></section>',
+<section class="comment-form-comment form-group"><div id="comment-textarea"><textarea id="comment" name="comment" placeholder="'.esc_attr__('Message', 'molakat').'"  cols="45" rows="8"  class="textarea-comment form-control" aria-required="true"></textarea></div></section>',
 		'fields' => apply_filters( 'comment_form_default_fields', array(
 
     'author' =>
-      '<div class="row"><section class="comment-form-author form-group col-md-4"><input id="author" class="input-name form-control" name="author" placeholder="'.esc_attr__('Name', 'butterfly').'"  type="text" value="' . esc_attr( $commenter['comment_author'] ) .
+      '<div class="row"><section class="comment-form-author form-group col-md-4"><input id="author" class="input-name form-control" name="author" placeholder="'.esc_attr__('Name', 'molakat').'"  type="text" value="' . esc_attr( $commenter['comment_author'] ) .
       '" size="30"' . $aria_req . ' /></section>',
 
     'email' =>
-      '<section class="comment-form-email form-group col-md-4"><input id="email" class="input-name form-control" name="email" placeholder="'.esc_attr__('Email', 'butterfly').'"  type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+      '<section class="comment-form-email form-group col-md-4"><input id="email" class="input-name form-control" name="email" placeholder="'.esc_attr__('Email', 'molakat').'"  type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
       '" size="30"' . $aria_req . ' /></section>',
 
     'url' =>
-      '<section class="comment-form-url form-group col-md-4"><input id="url" class="input-name form-control" placeholder="'.esc_attr__('Website', 'butterfly').'" name="url"  type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
+      '<section class="comment-form-url form-group col-md-4"><input id="url" class="input-name form-control" placeholder="'.esc_attr__('Website', 'molakat').'" name="url"  type="text" value="' . esc_attr( $commenter['comment_author_url'] ) .
       '" size="30" /></section></div>'
     ))
 );

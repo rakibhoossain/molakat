@@ -327,6 +327,7 @@ input.search-field {
 }
 input.search-submit:hover{
   background: #04091e;
+  cursor:pointer;
 }
 .search-form label {
     width: 100%;

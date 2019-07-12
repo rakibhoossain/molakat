@@ -124,8 +124,8 @@ if ( ! class_exists( 'Magazil_Related_Posts' ) ) {
 		 **/
 		function output_related_posts() {
  
-			// Check if related posts should be shown
-			$related_posts = $this->get_related_posts( get_the_ID(), get_option( 'posts_per_page' ) );
+			// Check if related posts should be shown get_option( 'posts_per_page' )
+			$related_posts = $this->get_related_posts( get_the_ID(), 4 );
 			if ( $related_posts->have_posts() ): ?>
 
             <div class="read_more mt-4">

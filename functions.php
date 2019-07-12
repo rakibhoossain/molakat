@@ -146,7 +146,7 @@ function molakat_widgets_init() {
 	// 	register_sidebar( array(
 	// 		'name'          => esc_attr__( 'Footer ', 'molakat' ).($i),
 	// 		'id'            => 'footer-'.($i),
-	// 		'description'   => esc_attr__( 'Add widgets here to appear in your footer.', 'butterfly' ),
+	// 		'description'   => esc_attr__( 'Add widgets here to appear in your footer.', 'molakat' ),
 	// 		'before_widget' => '<div id="%1$s" class="col-md-4 widget-box %2$s">',
 	// 		'after_widget'  => '</div>',
 	// 		'before_title'  => '<h4 class="widget-title">',

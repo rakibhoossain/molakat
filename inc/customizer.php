@@ -56,17 +56,18 @@ function molakat_customize_register( $wp_customize ) {
     ));
 
     $feature_post_cats = array(
-      'Kamerakabbo' => 1, 
-      'Dresshokabbo' => 2, 
-      'Interview' => 3, 
-      'Storyline' => 4, 
-      'Story' => 5, 
-      'Novel' => 6, 
-      'Poem' => 7, 
-      'BookDiscuss' => 8, 
-      'Cultural' => 9, 
-      'Kothamala' => 10, 
-      'News' => 11
+      'Kamerakabbo'   => 1, 
+      'Dresshokabbo'  => 2, 
+      'Interview'     => 3, 
+      'Storyline'     => 4, 
+      'Story'         => 5, 
+      'Novel'         => 6, 
+      'BookAdvert'    => 12,
+      'Poem'          => 7, 
+      'BookDiscuss'   => 8, 
+      'Cultural'      => 9, 
+      'Kothamala'     => 10, 
+      'News'          => 11
   );
 
 
@@ -140,7 +141,7 @@ function molakat_customize_register( $wp_customize ) {
         //  ====     social      ====
         //  ===================================
         // $wp_customize->add_section('butterfly_social_controls', array(
-        //     'title' => __('Social link', 'butterfly'),
+        //     'title' => __('Social link', 'molakat'),
         //     'panel' => 'butterfly_panel',
         //     'priority' => 5,
         // ));
@@ -152,7 +153,7 @@ function molakat_customize_register( $wp_customize ) {
         //     'default' => '#'
         // ));
         // $wp_customize->add_control('butterfly_facebook', array(
-        //     'label' => __('Facebook: ', 'butterfly'),
+        //     'label' => __('Facebook: ', 'molakat'),
         //     'settings' => 'butterfly_facebook',
         //     'section' => 'butterfly_social_controls',
         //     'type' => 'text',
@@ -165,7 +166,7 @@ function molakat_customize_register( $wp_customize ) {
         //     'default' => '#'
         // ));
         // $wp_customize->add_control('butterfly_youtube', array(
-        //     'label' => __('Youtube: ', 'butterfly'),
+        //     'label' => __('Youtube: ', 'molakat'),
         //     'settings' => 'butterfly_youtube',
         //     'section' => 'butterfly_social_controls',
         //     'type' => 'text',
@@ -176,8 +177,8 @@ function molakat_customize_register( $wp_customize ) {
 else:
     $wp_customize->add_section('oh_shit', array(
         'priority' => 6,
-        'title' => __('Oh Shit!', 'butterfly'),
-        'description' => __('WP_Customize_Panel class not exist. Contact with your admin', 'butterfly')
+        'title' => __('Oh Shit!', 'molakat'),
+        'description' => __('WP_Customize_Panel class not exist. Contact with your admin', 'molakat')
     ));
 endif;
 

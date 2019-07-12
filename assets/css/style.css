@@ -416,6 +416,15 @@
 }
 
 
+/*Page link*/
+.page-links {
+    clear: both;
+}
+.page-links a {
+    color: #46cf73;
+    margin-right: 5px;
+}
+
 /*widget*/
 .widget-title {
     background: #46CF73;
@@ -494,4 +503,19 @@ a {
 .info_title {
     color: #fff;
     background: #0a0a0a26;
+}
+figure {
+    max-width: 100%;
+}
+img{
+    max-width: 100%;
+    height: auto;  
+}
+.pull-right .heateor_sss_sharing_ul {
+    float: right;
+    overflow: hidden;
+    clear: both;
+}
+.heateor_sss_vertical_sharing {
+    display: none!important;
 }

@@ -14,11 +14,16 @@
 
 get_header();
 ?>
+<!-- smp = single menu page-->
+<div id="single_menu_page">
+  <div class="container">
+    <div class="smp_header">
+      <h2><?php single_post_title(); ?></h2>
+    </div>
+    <div class="row">
+     <div class="col-md-9">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
+      	<?php
 		while ( have_posts() ) :
 			the_post();
 
@@ -32,9 +37,14 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+      </div>
+      <div class="col-md-3">
+        <?php get_sidebar(); ?>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php
-get_sidebar();
+
 get_footer();
