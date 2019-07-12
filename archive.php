@@ -9,45 +9,41 @@
 
 get_header();
 ?>
+<!-- smp = single menu page-->
+<div id="single_menu_page">
+  <div class="container">
+    <div class="smp_header">
+      <h2><?php the_archive_title(); ?></h2>
+    </div>
+    <div class="row">
+     <div class="col-md-9">
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+      <?php 
+      if ( have_posts() ) :
+        while ( have_posts() ) :
+          the_post();
+          get_template_part( 'template-parts/content', get_post_type() );
 
-		<?php if ( have_posts() ) : ?>
+        endwhile; // End of the loop.
+        the_posts_pagination( array(
+          'prev_text' => '<i class="fa fa-arrow-left"></i><span class="screen-reader-text">' . __( 'Previous Page', 'molakat' ) . '</span>',
+          'next_text' => '<span class="screen-reader-text">' . __( 'Next Page', 'molakat' ) . '</span><i class="fa fa-arrow-right"></i>' ,
+          'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'molakat' ) . ' </span>',
+        ) );
+      else :
+        get_template_part( 'template-parts/content', 'none' );
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+      endif;
+      ?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+      </div>
+      <div class="col-md-3">
+        <?php get_sidebar(); ?>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php
-get_sidebar();
+
 get_footer();

@@ -315,7 +315,7 @@ input.search-submit {
     margin: 0;
     outline: none;
     border: 0;
-    background-color: #04091e;
+    background-color: #46CF73;
     color: #fff;
     transition: all 0.5s;
 }
@@ -327,7 +327,6 @@ input.search-field {
 }
 input.search-submit:hover{
   background: #04091e;
-  color: #334b82;
 }
 .search-form label {
     width: 100%;

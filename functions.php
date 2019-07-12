@@ -57,10 +57,12 @@ if ( ! function_exists( 'molakat_setup' ) ) :
 		add_image_size( 'molakat-small-s', 180, 100, true );
 		add_image_size( 'molakat-sm', 120, 80, true );
 		add_image_size( 'molakat-sm-s', 100, 60, true );
+		add_image_size( 'butterfly-author', 80, 80, true );
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'molakat' ),
+			'social' => esc_html__( 'Social Links Menu', 'molakat' ),
 		) );
 
 		/*
@@ -121,6 +123,15 @@ add_action( 'after_setup_theme', 'molakat_content_width', 0 );
  */
 function molakat_widgets_init() {
 	register_sidebar( array(
+		'name'          => esc_html__( 'Front page sidebar', 'molakat' ),
+		'id'            => 'front-page',
+		'description'   => esc_html__( 'Add widgets here to appear in your front-page.', 'molakat' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<div class="section_header mb-2"><h3>',
+		'after_title'   => '</h3></div>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'molakat' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'molakat' ),
@@ -129,6 +140,21 @@ function molakat_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+
+	// for($i=1;$i<=3;$i++){
+	// 	register_sidebar( array(
+	// 		'name'          => esc_attr__( 'Footer ', 'molakat' ).($i),
+	// 		'id'            => 'footer-'.($i),
+	// 		'description'   => esc_attr__( 'Add widgets here to appear in your footer.', 'butterfly' ),
+	// 		'before_widget' => '<div id="%1$s" class="col-md-4 widget-box %2$s">',
+	// 		'after_widget'  => '</div>',
+	// 		'before_title'  => '<h4 class="widget-title">',
+	// 		'after_title'   => '</h4>',
+	// 	) );
+	// }
+
+
 }
 add_action( 'widgets_init', 'molakat_widgets_init' );
 
@@ -158,8 +184,11 @@ function molakat_scripts() {
 
 	if ( is_single() ) {
 	    wp_enqueue_style( 'molakat-single-post', get_stylesheet_directory_uri() . '/assets/css/singleNewsPage.css', array(), '1.0' );
-	    wp_enqueue_style( 'molakat-single-post-responsive', get_stylesheet_directory_uri() . '/assets/css/singleNewsPageResponsive.css', array(), '1.0' );
+	    //wp_enqueue_style( 'molakat-single-post-responsive', get_stylesheet_directory_uri() . '/assets/css/singleNewsPageResponsive.css', array(), '1.0' );
 	}
+
+wp_enqueue_style( 'molakat-single-page', get_stylesheet_directory_uri() . '/assets/css/singlePage.css', array(), '1.0' );
+wp_enqueue_style( 'molakat-single-page-responsive', get_stylesheet_directory_uri() . '/assets/css/singleNewsPageResponsive.css', array(), '1.0' );	
 
 
 

@@ -14,16 +14,14 @@
 
 get_header();
 ?>
-    <!-- =========FB Plaugin initilize====== -->
-    <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.3"></script>
+
 
     <?php get_template_part( 'template-parts/section', 'top' ); ?>
 
     <section id="google_ads">
        <div class="container">
          <div class="ads">
-           <img src="https://via.placeholder.com/1300x120?text=Ads" class="img-fluid">
+           <?php echo wp_specialchars_decode(get_theme_mod( 'molakat_ad_2')); ?>
          </div>
        </div>
     </section>
@@ -60,7 +58,7 @@ get_header();
     <section id="google_ads">
        <div class="container">
          <div class="ads">
-           <img src="https://via.placeholder.com/1300x120?text=Ads" class="img-fluid">
+           <?php echo wp_specialchars_decode(get_theme_mod( 'molakat_ad_3')); ?>
          </div>
        </div>
     </section>
@@ -163,24 +161,17 @@ get_header();
                     <?php get_template_part( 'template-parts/section', '1-2-1' ); ?>
                   </div>
                   <div class="s">
-                    <div class="like_page">
-                      <div class="like_page_ad">
-                        <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-width="310" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
-                      </div>
-                    </div>
-                    <div class="g_ads_page">
-                      <div class="g_ad">
-                        <img src="https://via.placeholder.com/500x250.png?text=Google Ads" class="img-fluid">
-                      </div>
-                    </div>
+                    <?php
+                    if (is_active_sidebar("front-page")) :
+                        dynamic_sidebar("front-page");
+                    endif;
+                    ?>
+
+                    
                   </div>
-                <!-- </div> -->
-              <!-- </div> -->
+
             </div>
-          <!-- </div> -->
-          <!-- <div class="col-md-4 col-sm-12"> -->
-            
-          <!-- </div> -->
+
         </div>
       </div>
     </section>
