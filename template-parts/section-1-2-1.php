@@ -1,10 +1,10 @@
 <?php    
-$feature_post_cat_10 = get_theme_mod( 'molakat_feature_post_10', 0 );
-  $feature_post_10 = new wp_query( array('cat' => $feature_post_cat_10, 'posts_per_page'=> 1, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
+  $feature_post_cat_11 = get_theme_mod( 'molakat_feature_post_11', 0 );
+  $feature_post_11 = new wp_query( array('cat' => $feature_post_cat_11, 'posts_per_page'=> 1, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
   /* Start the Loop */
 
   $count = (int)0;
-  while ( $feature_post_10->have_posts() ) : $feature_post_10->the_post(); 
+  while ( $feature_post_11->have_posts() ) : $feature_post_11->the_post(); 
   if ($count == 0) { ?>
 
     <div class="s_mian_news position-relative hover_block">
@@ -39,11 +39,11 @@ $feature_post_cat_10 = get_theme_mod( 'molakat_feature_post_10', 0 );
 <div class="s_feature_news mt-2">
   <div class="d-flex">       
 <?php    
-  $feature_post_10x = new wp_query( array('cat' => $feature_post_cat_10, 'posts_per_page'=> 3, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
+  $feature_post_11x = new wp_query( array('cat' => $feature_post_cat_11, 'posts_per_page'=> 3, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
   /* Start the Loop */
 
   $count = (int)0;
-  while ( $feature_post_10x->have_posts() ) : $feature_post_10x->the_post(); 
+  while ( $feature_post_11x->have_posts() ) : $feature_post_11x->the_post(); 
   if ($count > 0) { ?>
 
   <div class="sfsn position-relative hover_block">

@@ -229,7 +229,10 @@ require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
  */
 require get_template_directory() . '/inc/class-magazil-related-posts.php';
 
-
+/**
+ * Widgets
+ */
+require get_template_directory() . '/inc/widgets/widgets.php';
 
 // add_filter('nav_menu_css_class', 'add_classes_on_li', 1, 3);
 // function add_classes_on_li($classes, $item, $args)

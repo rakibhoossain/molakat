@@ -7,7 +7,7 @@
 	}
 }
 @media screen and (max-width: 1199px) {
-	#slider_news{
+	#slider_news,#slider_news_1{
 		margin-top: 20px;
 	}
 	#slider, #favourite_writing{

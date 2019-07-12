@@ -1,9 +1,11 @@
 <?php    
-  $feature_post_1 = new wp_query( array('posts_per_page'=> 1, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
+
+$feature_post_cat_2 = get_theme_mod( 'molakat_feature_post_2', 0 );
+$feature_post_2 = new wp_query( array('cat' => $feature_post_cat_2, 'posts_per_page'=> 1, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
   /* Start the Loop */
 
   $count = (int)0;
-  while ( $feature_post_1->have_posts() ) : $feature_post_1->the_post(); 
+  while ( $feature_post_2->have_posts() ) : $feature_post_2->the_post(); 
   if ($count == 0) { ?>
 
   <div class="sk_top_news position-relative hover_block">
@@ -37,11 +39,11 @@
 
 <div class="sk_side_news">      
 <?php    
-  $feature_post_1 = new wp_query( array('posts_per_page'=> 4, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
+  $feature_post_2 = new wp_query( array('cat' => $feature_post_cat_2, 'posts_per_page'=> 4, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
   /* Start the Loop */
 
   $count = (int)0;
-  while ( $feature_post_1->have_posts() ) : $feature_post_1->the_post(); 
+  while ( $feature_post_2->have_posts() ) : $feature_post_2->the_post(); 
   if ($count > 0) { ?>
 
   <div class="sk_side_single_news d-flex position-relative hover_block mt-3">

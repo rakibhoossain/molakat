@@ -120,7 +120,7 @@
 
 
 
-            <?php get_template_part( 'template-parts/sidebar-post', 'tab' ); ?>
+            <?php get_sidebar(); ?>
 
           </div>
         </div>

@@ -105,3 +105,47 @@ if ( ! function_exists( 'molakat_post_categories' ) ) :
     }
   }
 endif;
+
+/*
+ * Set post views count using post meta
+ */
+function setPostViews($postID) {
+    $countKey = 'wpb_post_views_count';
+    $count = get_post_meta($postID, $countKey, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $countKey);
+        add_post_meta($postID, $countKey, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $countKey, $count);
+    }
+}
+
+/**
+ * Get all posts
+ * 
+ * @return array
+ */
+function butterfly_post_list() {
+  $pages    = array();
+  foreach ( get_posts() as $page ) {
+    $pages[ $page->ID ] = $page->post_title;
+  }
+
+  return $pages;
+}
+
+/**
+ * Get all categories
+ * 
+ * @return array
+ */
+function butterfly_cat_list() {
+  $cats    = array();
+  foreach ( get_categories() as $categories => $category ) {
+    $cats[ $category->term_id ] = $category->name;
+  }
+
+  return $cats;
+}

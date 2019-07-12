@@ -18,87 +18,7 @@ get_header();
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.3"></script>
 
-    <section id="slider_news">
-      <div class="container">
-        <div class="slider_fn d-flex">
-          <!-- <div class="col-md-6"> -->
-            <div id="slider">
-              <div class="owl-carousel owl-theme">
-<?php    
-  $feature_post_1 = new wp_query( array('posts_per_page'=> 4, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
-  /* Start the Loop */
-  while ( $feature_post_1->have_posts() ) : $feature_post_1->the_post(); ?>
-
-    <div class="carousel_item position-relative hover_block">
-      <?php if(has_post_thumbnail()){ 
-        $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'molakat-large' );
-        $image = esc_url($image_url[0]);
-        $title = get_the_title();
-        printf('<img class="img-fluid" src="'.esc_url($image).'" alt="'.$title.'">');
-        }else{
-          printf('<img class="img-fluid" src="https://via.placeholder.com/800x460" alt="'.$title.'">');
-        }
-      ?>
-      <a href="<?php echo esc_url( get_the_permalink() ); ?>" class="overlay_link"></a>
-    </div>
-<?php
-  endwhile;
-  wp_reset_postdata();
-  wp_reset_query();       
-?>
-
-
-              </div>
-            </div>
-          <!-- </div> -->
-          <!-- <div class="col-md-6"> -->
-            <div id="favourite_writing" class="pl-4">
-              <div class="section_header favourite_writing_header mb-2">
-                <h3>জনপ্রিয় লেখা</h3>
-              </div>
-              <div class="favourite_writing_news d-flex">
-
-
-<?php    
-  $feature_post_1 = new wp_query( array('posts_per_page'=> 4, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
-  /* Start the Loop */
-
-  $count = (int)0;
-  while ( $feature_post_1->have_posts() ) : $feature_post_1->the_post(); ?>
-
-    <div class="summary position-relative hover_block <?php echo ($count>=2)? 'mt-3':'' ?>">
-
-      <?php if(has_post_thumbnail()){ 
-        $image_url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'molakat-large' );
-        $image = esc_url($image_url[0]);
-        $title = get_the_title();
-        printf('<img class="img-fluid" src="'.esc_url($image).'" alt="'.$title.'">');
-        }else{
-          printf('<img class="img-fluid" src="https://via.placeholder.com/300x150" alt="'.$title.'">');
-        }
-      ?>
-      <a href="<?php echo esc_url( get_the_permalink() ); ?>" class="overlay_link"></a>
-       <div class="summary_info">
-         <div class="info_title">
-           <?php the_title( '<h4><span>', '</span></h4>' );?>
-         </div>
-       </div>
-    </div>
-<?php
-  $count++;
-  endwhile;
-  wp_reset_postdata();
-  wp_reset_query();  
-  $count = 0;     
-?>
-
-
-              </div>
-            </div>
-          <!-- </div> -->
-        </div>
-      </div>
-    </section>
+    <?php get_template_part( 'template-parts/section', 'top' ); ?>
 
     <section id="google_ads">
        <div class="container">
@@ -135,74 +55,7 @@ get_header();
     </section>
 
 
-    <section id="slider_news">
-      <div class="container"> 
-        <div class="slider_fn d-flex">
-          <!-- <div class="col-md-6"> -->
-            <div id="slider">
-              <div class="section_header handshack_header mb-2">
-                      <h3>সাক্ষাৎকার</h3>
-                    </div>
-              <div class="owl-carousel owl-theme">
-                <div class="carousel_item position-relative hover_block">
-                  <img src="https://via.placeholder.com/800x460" class="img-fluid">
-                  <a href="#" class="overlay_link"></a>
-                </div>
-                <div class="carousel_item position-relative hover_block">
-                  <img src="https://via.placeholder.com/800x460" class="img-fluid">
-                  <a href="#" class="overlay_link"></a>
-                </div>
-                <div class="carousel_item position-relative hover_block">
-                  <img src="https://via.placeholder.com/800x460" class="img-fluid">
-                  <a href="#" class="overlay_link"></a>
-                </div>
-                <div class="carousel_item position-relative hover_block">
-                  <img src="https://via.placeholder.com/800x460" class="img-fluid">
-                  <a href="#" class="overlay_link"></a>
-                </div>
-                <div class="carousel_item position-relative hover_block">
-                  <img src="https://via.placeholder.com/800x460" class="img-fluid">
-                  <a href="#" class="overlay_link"></a>
-                </div>
-                <div class="carousel_item position-relative hover_block">
-                  <img src="https://via.placeholder.com/800x460" class="img-fluid">
-                  <a href="#" class="overlay_link"></a>
-                </div>
-                <div class="carousel_item position-relative hover_block">
-                  <img src="https://via.placeholder.com/800x460" class="img-fluid">
-                  <a href="#" class="overlay_link"></a>
-                </div>
-              </div>
-            </div>
-          <!-- </div> -->
-          <!-- <div class="col-md-6"> -->
-            <div id="favourite_writing" class="pl-4">
-              <div class="section_header favourite_writing_header mb-2">
-                <h3>প্রবন্ধ</h3>
-              </div>
-              <div class="favourite_writing_news d-flex">
-
-
-
-                 <div class="summary position-relative hover_block">
-                   <img src="https://via.placeholder.com/300x150" class="img-fluid">
-                   <a href="#" class="overlay_link"></a>
-                   <div class="summary_info">
-                     <div class="info_title">
-                       <h4><span>আমার সোনার বাংলা</span></h4>
-                     </div>
-                   </div>
-                 </div>
-
-
-
-              </div>
-            </div>
-          <!-- </div> -->
-        </div>
-        
-      </div>
-    </section>
+<?php get_template_part( 'template-parts/section', 'topv' ); ?>
 
     <section id="google_ads">
        <div class="container">
@@ -232,7 +85,7 @@ get_header();
               <div class="section_header novel_header mb-2">
                 <h3>উপন্যাস</h3>
               </div>
-              <?php get_template_part( 'template-parts/section', '1-3' ); ?>
+              <?php get_template_part( 'template-parts/section', '1-3-1' ); ?>
             </div>
           <!-- </div> -->
         </div>
@@ -269,7 +122,7 @@ get_header();
               <div class="section_header book_discuss_header mb-2">
                 <h3 class="section_header">বই আলোচনা</h3>
               </div>
-              <?php get_template_part( 'template-parts/section', '1-3v' ); ?>
+              <?php get_template_part( 'template-parts/section', '1-3v-1' ); ?>
             </div>
           <!-- </div> -->
           <!-- <div class="col-md-4"> -->
@@ -277,7 +130,7 @@ get_header();
               <div class="section_header culture_header mb-2">
                 <h3>সংস্কৃতি</h3>
               </div>
-              <?php get_template_part( 'template-parts/section', '1-3v' ); ?>
+              <?php get_template_part( 'template-parts/section', '1-3v-2' ); ?>
             </div>
           <!-- </div> -->
         </div>
@@ -307,7 +160,7 @@ get_header();
                     <div class="section_header mb-2">
                       <h3>সংবাদ</h3>
                     </div>
-                    <?php get_template_part( 'template-parts/section', '1-2' ); ?>
+                    <?php get_template_part( 'template-parts/section', '1-2-1' ); ?>
                   </div>
                   <div class="s">
                     <div class="like_page">

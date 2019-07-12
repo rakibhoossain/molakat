@@ -1,7 +1,7 @@
 
 
 /*===============Favourite Writing======*/
-#slider_news{
+#slider_news,#slider_news_1{
 	background-color: #FBF5EF;
 	padding-top: 5px;
 }
@@ -9,7 +9,8 @@
 	flex-basis: 50%;
 	overflow: hidden;
 }
-#slider_news .summary{
+#slider_news .summary,
+#slider_news_1 .summary{
 	flex-basis: 49%;
 	margin: 0 auto;
 }

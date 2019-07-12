@@ -1,10 +1,10 @@
-<?php
-$feature_post_cat_5 = get_theme_mod( 'molakat_feature_post_5', 0 );   
-$feature_post_5 = new wp_query( array('cat' => $feature_post_cat_5, 'posts_per_page'=> 1, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
+<?php    
+$feature_post_cat_6 = get_theme_mod( 'molakat_feature_post_6', 0 ); 
+$feature_post_6 = new wp_query( array('cat' => $feature_post_cat_6, 'posts_per_page'=> 1, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
 /* Start the Loop */
 
 $count = (int)0;
-while ( $feature_post_5->have_posts() ) : $feature_post_5->the_post(); 
+while ( $feature_post_6->have_posts() ) : $feature_post_6->the_post(); 
   if ($count == 0) { ?>
 
     <div class="story_mimg position-relative hover_block">
@@ -27,7 +27,6 @@ while ( $feature_post_5->have_posts() ) : $feature_post_5->the_post();
   }
   ?>
   <?php
-  
   $count++;
 endwhile;
 wp_reset_postdata();
@@ -36,12 +35,12 @@ $count = 0;
 ?>
 
 <div class="d-flex story_fn mt-3">         
-  <?php
-  $feature_post_5x = new wp_query( array('cat' => $feature_post_cat_5, 'posts_per_page'=> 4, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
+  <?php    
+  $feature_post_6x = new wp_query( array('cat' => $feature_post_cat_6, 'posts_per_page'=> 4, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
   /* Start the Loop */
 
   $count = (int)0;
-  while ( $feature_post_5x->have_posts() ) : $feature_post_5x->the_post(); 
+  while ( $feature_post_6x->have_posts() ) : $feature_post_6x->the_post(); 
     if ($count > 0) { ?>
 
       <div class="story_fsn position-relative hover_block">

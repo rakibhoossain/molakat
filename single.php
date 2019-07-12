@@ -8,6 +8,7 @@
  */
 
 get_header();
+setPostViews(get_the_ID());
 ?>
 <?php
 while ( have_posts() ) :
