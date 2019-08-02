@@ -60,7 +60,7 @@ $feature_post_kkabbo = new wp_query( array('cat' => $feature_post_cat_1, 'posts_
       ?>
       </div>
       <div class="ck_fn_heading">
-        <?php the_title( '<h4>', '</h4>' );?>
+        <?php the_title( '<h4 class="title-sub">', '</h4>' );?>
       </div>
        <a href="<?php echo esc_url( get_the_permalink() ); ?>" class="overlay_link"></a>
     </div>

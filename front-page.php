@@ -33,7 +33,7 @@ get_header();
           <!-- <div class="col-md-8"> -->
             <div class="camera_kabbo">
               <div class="section_header">
-                <h3>ক্যামেরাকাব্য</h3>
+                <h3><?php echo get_theme_mod( 'molakat_feature_title_1', 'ক্যামেরাকাব্য' ); ?></h3>
               </div>
               <?php get_template_part( 'template-parts/section', '1-4' ); ?>
             </div>
@@ -42,7 +42,7 @@ get_header();
 
             <div class="scene_kabbo">
               <div class="section_header">
-                <h3>দৃশ্যকাব্য </h3>
+                <h3><?php echo get_theme_mod( 'molakat_feature_title_2', 'দৃশ্যকাব্য' ); ?></h3>
               </div>
               <?php get_template_part( 'template-parts/section', '1-3x' ); ?>
             </div>
@@ -73,7 +73,7 @@ get_header();
           <!-- <div class="col-md-6"> -->
             <div class="story mr">
               <div class="section_header story_header mb-2">
-                <h3>গল্প</h3>
+                <h3><?php echo get_theme_mod( 'molakat_feature_title_5', 'গল্প' ); ?></h3>
               </div>
               <?php get_template_part( 'template-parts/section', '1-3' ); ?>
             </div>
@@ -81,7 +81,7 @@ get_header();
           <!-- <div class="col-md-6"> -->
             <div class="novel ml">
               <div class="section_header novel_header mb-2">
-                <h3>উপন্যাস</h3>
+                <h3><?php echo get_theme_mod( 'molakat_feature_title_6', 'উপন্যাস' ); ?></h3>
               </div>
               <?php get_template_part( 'template-parts/section', '1-3-1' ); ?>
             </div>
@@ -110,7 +110,7 @@ get_header();
           <!-- <div class="col-md-4"> -->
             <div class="poem">
               <div class="section_header poem_header mb-2">
-                <h3>কবিতা</h3>
+                <h3><?php echo get_theme_mod( 'molakat_feature_title_7', 'কবিতা' ); ?></h3>
               </div>
                 <?php get_template_part( 'template-parts/section', '1-3v' ); ?>
             </div>
@@ -118,7 +118,7 @@ get_header();
           <!-- <div class="col-md-4"> -->
             <div class="book_discuss">
               <div class="section_header book_discuss_header mb-2">
-                <h3 class="section_header">বই আলোচনা</h3>
+                <h3 class="section_header"><?php echo get_theme_mod( 'molakat_feature_title_8', 'বই আলোচনা' ); ?></h3>
               </div>
               <?php get_template_part( 'template-parts/section', '1-3v-1' ); ?>
             </div>
@@ -126,7 +126,7 @@ get_header();
           <!-- <div class="col-md-4"> -->
             <div class="culture">
               <div class="section_header culture_header mb-2">
-                <h3>সংস্কৃতি</h3>
+                <h3><?php echo get_theme_mod( 'molakat_feature_title_9', 'সংস্কৃতি' ); ?></h3>
               </div>
               <?php get_template_part( 'template-parts/section', '1-3v-2' ); ?>
             </div>
@@ -148,7 +148,7 @@ get_header();
                 <!-- <div class="col-md-6 col-sm-12"> -->
                   <div class="s">
                     <div class="section_header mb-2">
-                      <h3>কথামালা</h3>
+                      <h3><?php echo get_theme_mod( 'molakat_feature_title_10', 'কথামালা' ); ?></h3>
                     </div>
                     <?php get_template_part( 'template-parts/section', '1-2' ); ?>
                   </div>
@@ -156,7 +156,7 @@ get_header();
                 <!-- <div class="col-md-6 col-sm-12"> -->
                   <div class="s">
                     <div class="section_header mb-2">
-                      <h3>সংবাদ</h3>
+                      <h3><?php echo get_theme_mod( 'molakat_feature_title_11', 'সংবাদ' ); ?></h3>
                     </div>
                     <?php get_template_part( 'template-parts/section', '1-2-1' ); ?>
                   </div>

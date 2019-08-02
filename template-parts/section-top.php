@@ -34,13 +34,15 @@
         <!-- <div class="col-md-6"> -->
           <div id="favourite_writing" class="pl-4">
             <div class="section_header favourite_writing_header mb-2">
-              <h3>জনপ্রিয় লেখা</h3>
+              <h3><?php echo get_theme_mod( 'molakat_feature_title_13', 'নির্বাচিত লেখা' ); ?></h3>
             </div>
             <div class="favourite_writing_news d-flex">
 
 
               <?php    
-              $molakat_top_latest = new wp_query( array('posts_per_page'=> 4, 'meta_key' => 'wpb_post_views_count','no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
+
+              $feature_post_cat_13 = get_theme_mod( 'molakat_feature_post_13', 0 );
+              $molakat_top_latest = new wp_query( array('cat' => $feature_post_cat_13, 'posts_per_page'=> 1, 'no_found_rows' => 1 , 'ignore_sticky_posts' => true)  );
               /* Start the Loop */
 
               $count = (int)0;

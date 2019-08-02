@@ -61,7 +61,7 @@ $feature_post_2 = new wp_query( array('cat' => $feature_post_cat_2, 'posts_per_p
 
     </div>
     <div class="sk_side_news_heading fb-70">
-      <?php the_title( '<h4 class="ml-3">', '</h4>' );?>
+      <?php the_title( '<h4 class="ml-3 title-sub">', '</h4>' );?>
     </div>
     <a href="<?php echo esc_url( get_the_permalink() ); ?>" class="overlay_link"></a>
   </div>

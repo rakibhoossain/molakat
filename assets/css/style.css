@@ -96,8 +96,14 @@
 	flex-basis: 24%;
 	margin: 0 auto;
 }
+.single_ads_book_heading>h4,
+.story_fn_heading>h4,
+.sfsn_heading>h4,
+.p_fsn_heading>h4,
+.story_fn_heading>h4,
+.title-sub,
 .ck_fn_heading>h4{
-	font-size: 18px;
+	font-size: 20px;
 }
 
 
@@ -492,6 +498,7 @@ a {
   -ms-word-break: break-all;
   word-break: break-all;
 }
+.sk_top_news_heading,
 .ck_fn_heading,
 .sfsn_heading,
 .s_main_news_heading,

@@ -4,7 +4,7 @@
       <!-- <div class="col-md-6"> -->
         <div id="slider">
           <div class="section_header handshack_header mb-2">
-                      <h3>সাক্ষাৎকার</h3>
+                      <h3><?php echo get_theme_mod( 'molakat_feature_title_3', 'সাক্ষাৎকার' ); ?></h3>
                     </div>
           <div class="owl-carousel owl-theme">
             <?php    
@@ -38,7 +38,7 @@
         <!-- <div class="col-md-6"> -->
           <div id="favourite_writing" class="pl-4">
             <div class="section_header favourite_writing_header mb-2">
-              <h3>প্রবন্ধ</h3>
+              <h3><?php echo get_theme_mod( 'molakat_feature_title_4', 'প্রবন্ধ' ); ?></h3>
             </div>
             <div class="favourite_writing_news d-flex">
 

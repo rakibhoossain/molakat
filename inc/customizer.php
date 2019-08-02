@@ -55,7 +55,10 @@ function molakat_customize_register( $wp_customize ) {
         'priority' => 2,
     ));
 
+
+
     $feature_post_cats = array(
+      'Nirbachito'    => 13,
       'Kamerakabbo'   => 1, 
       'Dresshokabbo'  => 2, 
       'Interview'     => 3, 
@@ -67,12 +70,27 @@ function molakat_customize_register( $wp_customize ) {
       'BookDiscuss'   => 8, 
       'Cultural'      => 9, 
       'Kothamala'     => 10, 
-      'News'          => 11
+      'News'          => 11   //13
   );
 
 
     foreach($feature_post_cats as $cat_nm=>$cat_pos)
     {
+
+
+
+$wp_customize->add_setting( 'molakat_feature_title_'.$cat_pos, array(
+  'capability' => 'edit_theme_options',
+  'default' => $cat_nm,
+  'sanitize_callback' => 'sanitize_text_field',
+) );
+
+$wp_customize->add_control( 'molakat_feature_title_'.$cat_pos, array(
+  'type' => 'text',
+  'section' => 'butterfly_feature_post_controls', // Add a default or your own section
+  'label' => $cat_nm.__( 'Title', 'molakat' ),
+) );
+
         $wp_customize->add_setting( 'molakat_feature_post_'.$cat_pos, array(
             'sanitize_callback' =>  'butterfly_sanitize_array_catagory',
              // 'default'           => '',
